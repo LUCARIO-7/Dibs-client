@@ -10,7 +10,7 @@ const user=ref('');
             Authorization:`Bearer ${localStorage.getItem("token")}`
         }
     })
-    user.value=response.value.data.name
+    user.value=response.value.data;
 }
 catch(error){
     console.log(error);
@@ -19,5 +19,7 @@ catch(error){
 getCurrUser();
 </script>
 <template>
-    <h1 v-bind="res">username {{ user }}</h1>
+    <div class="">
+    <h1 class="text-3xl font-bold bg-black text-gray-50">username {{ user }}</h1>
+    </div>
 </template>

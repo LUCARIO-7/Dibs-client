@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Homepage from '../components/Homepage.vue';
 import Login from '../components/Login.vue';
 import Logout from '@/components/Logout.vue';
+import Item from '@/components/Item.vue';
+import AddItem from '@/components/addItem.vue';
 
 const routes = [
   {
@@ -12,13 +14,17 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Homepage,
-    meta:{requiresAuth:true}
+    component: Homepage
   },
   {
-    path:'/logout',
-    name:'Logout',
-    component: Logout
+    path:'/item',
+    name:'Item',
+    component: Item
+  },
+  {
+    path:'/additem',
+    name:'addItem',
+    component: AddItem
   }
 ];
 
