@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Homepage from '../components/Homepage.vue';
 import Login from '../components/Login.vue';
-import Logout from '@/components/Logout.vue';
-import Item from '@/components/Item.vue';
 import AddItem from '@/components/addItem.vue';
+import LostItems from '@/components/LostItems.vue';
+import Founditems from '@/components/Founditems.vue';
 
 
 
@@ -19,14 +19,19 @@ const routes = [
     component: Homepage
   },
   {
-    path:'/item',
+    path:'/lostItems',
     name:'Item',
-    component: Item
+    component: LostItems
   },
   {
     path:'/additem',
     name:'AddItem',
     component: AddItem
+  },
+  {
+    path:'/founditems',
+    name:'foundItem',
+    component: Founditems
   }
 ];
 
