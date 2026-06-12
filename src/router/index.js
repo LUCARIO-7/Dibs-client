@@ -5,6 +5,8 @@ import Logout from '@/components/Logout.vue';
 import Item from '@/components/Item.vue';
 import AddItem from '@/components/addItem.vue';
 
+
+
 const routes = [
   {
     path: '/login',
@@ -23,7 +25,7 @@ const routes = [
   },
   {
     path:'/additem',
-    name:'addItem',
+    name:'AddItem',
     component: AddItem
   }
 ];
