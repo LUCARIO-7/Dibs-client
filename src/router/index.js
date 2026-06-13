@@ -4,6 +4,7 @@ import Login from '../components/Login.vue';
 import AddItem from '@/components/addItem.vue';
 import LostItems from '@/components/LostItems.vue';
 import Founditems from '@/components/Founditems.vue';
+import User from '@/components/user.vue';
 
 
 
@@ -32,6 +33,11 @@ const routes = [
     path:'/founditems',
     name:'foundItem',
     component: Founditems
+  },
+  {
+    path:'/user',
+    name:'user',
+    component: User
   }
 ];
 

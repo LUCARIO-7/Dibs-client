@@ -12,8 +12,8 @@
       <li><a href="/additem">post</a></li>
     </ul>
   </div>
-  <div class="navbar-end">
-  </div>
+    
+  <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar bg-white"></div>
 </div>
   <router-view/>
 </template>
