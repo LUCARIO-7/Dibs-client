@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-
+import ClaimedItems from './Items/ClaimedItems.vue';
 const username=ref('');
 async function getUsername(){
     try {
@@ -14,10 +14,10 @@ async function getUsername(){
 getUsername();
 </script>
 <template > 
-<div class="flex justify-center items-center h-120"> 
+<div class="flex justify-center items-center h-80"> 
   <div class="card bg-base-100 w-96 shadow-sm text-black border border-gray-200">
     
-    <figure class="bg-white h-80 flex flex-col items-center justify-center">
+    <figure class="bg-white h-40 flex flex-col items-center justify-center">
       <div class="avatar">
         <div class="w-24 rounded-full ring ring-accent-content ring-offset-base-100 ring-offset-2">
           <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Batperson Profile" />
@@ -32,5 +32,8 @@ getUsername();
     </div>
   </div>
 </div>
-
+<p class=" text-3xl">
+  ClaimedItems
+</p>
+<ClaimedItems/>
 </template>
