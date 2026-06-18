@@ -4,7 +4,7 @@
       <a class="text-xl text-white" href="/">Dibs</a>
     </div>
     
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center">
       <ul class="menu menu-horizontal px-1 gap-8">
         <li><a href="/">home</a></li>
         <li><a href="/founditems">browse</a></li>

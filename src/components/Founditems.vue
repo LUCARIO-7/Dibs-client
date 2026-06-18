@@ -1,6 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import searchTab from './Navigation/searchTab.vue';
 const items=ref();
 const baseimage=ref();
 async function fetchItems(){
@@ -17,11 +18,12 @@ async function claimItem(itemid){
 fetchItems();
 </script>
 <template>
+  <searchTab/>
   <div class="flex justify-center items-center flex-col">
    <ul v-for="item in items" :key="item.id">
      <div class="card bg-base-100 w-150 shadow-sm  mb-5">
   <figure>
-    <img :src="`data:image/png;base64,${item.image}`" />
+    <img :src="`data:image/png;base64,${item.image}`" class="object-cover h-120 w-240" />
   </figure>
   <div class="card-body bg-white rounded-b-sm text-black">
     <h2 class="card-title">{{item.name }}</h2>
