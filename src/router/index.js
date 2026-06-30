@@ -7,6 +7,7 @@ import Founditems from '@/components/Founditems.vue';
 import User from '@/components/user.vue';
 import NotFound from '@/components/NotFound.vue';
 import Logout from '@/components/Logout.vue';
+import Signup from '@/components/register/Signup.vue';
 
 
 
@@ -51,6 +52,11 @@ const routes = [
     path:'/404',
     name:'notFound',
     component: NotFound
+  },
+  {
+    path:'/signUp',
+    name:'register',
+    component: Signup
   },
   { path: '/:catchAll(.*)', 
     redirect: '/404'

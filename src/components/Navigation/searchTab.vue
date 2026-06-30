@@ -11,8 +11,8 @@ async function fetchItems(){
 }
 </script>
 <template>
-   <input type="text" v-model="searchQuery" >
-   <button class="btn btn-accent" @click="fetchItems">search</button>
+   <input type="text" class="bg-black rounded-md" v-model="searchQuery" >
+   <button class="btn btn-accent h-8" @click="fetchItems">search</button>
   <ul v-for="item in items" :key="item.id">
        <li class="list-row">
     <div><img class="size-10 rounded-box" :src="`data:image/png;base64,${item.image}`"/></div>

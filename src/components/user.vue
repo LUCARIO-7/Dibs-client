@@ -3,10 +3,12 @@ import axios from 'axios';
 import { ref } from 'vue';
 import ClaimedItems from './Items/ClaimedItems.vue';
 const username=ref('');
+const user=ref({});
 async function getUsername(){
     try {
         const response= await axios.get("http://localhost:8081/user");
-        username.value=response.data;
+        user.value=response.data;
+        username.value=user.value.username;
     } catch (error) {
         console.log(error);
     }
@@ -20,7 +22,9 @@ getUsername();
     <figure class="bg-white h-40 flex flex-col items-center justify-center">
       <div class="avatar">
         <div class="w-24 rounded-full ring ring-accent-content ring-offset-base-100 ring-offset-2">
-          <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Batperson Profile" />
+
+            <img :src="`data:image/png;base64,${user.profilePicture}`" class="rounded-full" />
+            
         </div>
       </div>
     </figure>

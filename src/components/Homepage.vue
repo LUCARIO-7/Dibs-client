@@ -20,6 +20,6 @@ getCurrUser();
 </script>
 <template>
     <div class="">
-    <h1 class="text-3xl font-bold bg-black text-gray-50">username {{ user }}</h1>
+    <h1 class="text-3xl font-bold bg-black text-gray-50">username {{ user.username }}</h1>
     </div>
 </template>

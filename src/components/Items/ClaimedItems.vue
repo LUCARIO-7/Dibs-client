@@ -2,7 +2,6 @@
 import axios from 'axios';
 import { ref } from 'vue';
 const items=ref();
-const baseimage=ref();
 async function fetchClaimedItems(){
    const response= await axios.get("http://localhost:8081/claimedItems");
    items.value=response.data;
