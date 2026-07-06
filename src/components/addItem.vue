@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-const item=ref({
+var item=ref({
     name:'',
     description:'',
     time:'',
@@ -15,7 +15,16 @@ const getimage=ref();
 function handleImageupload(event){
     getimage.value=event.target.files[0];
 }
+function handleLostorFound(isLost){
+    if(isLost=="LOST")
+    item.value.isLost=true;
+    else
+    item.value.isLost=false;
+}
 async function addItem(){
+    
+    item.value.time=item.value.time.replace("T"," ")
+    console.log(item.value.time);
     formData.append('item',new Blob([JSON.stringify(item.value)],{
         type:"application/json"
     }));
@@ -54,9 +63,20 @@ async function addItem(){
   <label  class="label" >attach image</label>
   <input @change="handleImageupload" type="file" class="file-input" />
 
-  <label class="label">time</label>
-  <input v-model="item.time" type="text" class="input mb-1" placeholder="input approx time"/>
-  
+   <div class="form-control w-full mb-2">
+      <label class="label text-sm text-slate-700">When was it lost/found?</label>
+      <input 
+        v-model="item.time" 
+        type="datetime-local" 
+        class="input input-bordered w-full" 
+      />
+    </div>
+  <div class="flex items-center">
+<label class="label ml-2">Lost</label>
+<input type="radio" name="radio-4" class="radio radio-primary " checked="checked" @change="handleLostorFound('LOST')" />
+<label class="label ml-2">Found</label>
+<input type="radio" name="radio-4" class="radio radio-primary" @change="handleLostorFound('FOUND')"/>
+  </div>
   <button class="btn btn-accent " type="submit">add item</button>
   </form>
 </fieldset>
