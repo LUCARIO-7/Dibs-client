@@ -66,7 +66,7 @@ getCurrUser();
             <div class="bg-white p-3 rounded-xl shadow-xs border border-slate-200 flex gap-4 hover:shadow-md transition">
               <div class="w-24 h-20 bg-slate-200 rounded-lg overflow-hidden shrink-0">
                 <!-- Base64 image placeholder template matching your previous styles -->
-                <img src="C:\Projects\spring\Dibs-client\src\assets\images\backpack.png" class="w-full h-full object-cover" alt="Backpack" />
+                <img src="@/assets/images/backpack.png" class="w-full h-full object-cover" alt="Backpack" />
               </div>   
               <div class="flex flex-col justify-between py-0.5">
                 <div>
