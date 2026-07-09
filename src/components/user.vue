@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import ClaimedItems from './Items/ClaimedItems.vue';
+import PostedItems from './Items/PostedItems..vue';
 const username=ref('');
 const user=ref({});
 async function getUsername(){
@@ -36,8 +37,10 @@ getUsername();
     </div>
   </div>
 </div>
-<p class=" text-3xl">
-  ClaimedItems
-</p>
+
+<div class="grid-cols-2">
 <ClaimedItems/>
+<PostedItems/>
+</div>
+
 </template>

@@ -3,14 +3,14 @@ import axios from 'axios';
 import { ref } from 'vue';
 const items=ref();
 async function fetchClaimedItems(){
-   const response= await axios.get("http://localhost:8081/claimedItems");
+   const response= await axios.get("http://localhost:8081/postedItems");
    items.value=response.data;
 }
 fetchClaimedItems();
 </script>
 <template>
   <p class=" text-3xl">
-  Claimed Items
+  Posted Items
 </p>
   <div class="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
    <div v-for="item in items" :key="item.id" >
