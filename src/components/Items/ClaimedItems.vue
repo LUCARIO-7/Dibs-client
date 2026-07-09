@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ref } from 'vue';
 const items=ref();
 async function fetchClaimedItems(){
-   const response= await axios.get("http://localhost:8081/claimedItems");
+    const response= await axios.get("/claimedItems");
    items.value=response.data;
 }
 fetchClaimedItems();

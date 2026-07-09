@@ -5,7 +5,7 @@ const items=ref([]);
 
 const searchQuery=ref('');
 async function fetchItems(){
-   const response= await axios.get(`http://localhost:8081/search/${searchQuery.value}`);
+    const response= await axios.get(`/search/${searchQuery.value}`);
    items.value=response.data;
   console.log(items.value)
 }

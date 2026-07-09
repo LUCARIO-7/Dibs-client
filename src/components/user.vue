@@ -7,7 +7,7 @@ const username=ref('');
 const user=ref({});
 async function getUsername(){
     try {
-        const response= await axios.get("http://localhost:8081/user");
+        const response= await axios.get("/user");
         user.value=response.data;
         username.value=user.value.username;
     } catch (error) {

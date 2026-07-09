@@ -5,12 +5,12 @@ import { ref } from 'vue';
 const items=ref();
 const baseimage=ref();
 async function fetchItems(){
-   const response= await axios.get("http://localhost:8081/founditems");
+   const response= await axios.get("/founditems");
    items.value=response.data;
 }
 async function claimItem(itemid){
   try {
-    const response=await axios.get(`http://localhost:8081/claimitem/${itemid}`);
+    const response=await axios.get(`/claimitem/${itemid}`);
   } catch (error) {
     console.log(error);
   }
@@ -24,7 +24,7 @@ else{
   location="";
 }
 try {
-    const response=await axios.get(`http://localhost:8081/founditems/filter`,{
+    const response=await axios.get(`/founditems/filter`,{
       params:{
         "location":location,
         "time":""

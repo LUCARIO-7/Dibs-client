@@ -18,7 +18,7 @@ async function adduser() {
     formData.append('profilePicture',profilePicture.value);
      console.log(formData)
     try {
-       const response= await axios.post("http://localhost:8081/register",formData,{
+       const response= await axios.post("/register",formData,{
             headers:{
                 'Content-Type': 'multipart/form-data'
             }

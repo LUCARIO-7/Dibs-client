@@ -30,7 +30,7 @@ async function addItem(){
     }));
     formData.append('image',getimage.value);
     try {
-        const response= await axios.post("http://localhost:8081/item",formData,{
+        const response= await axios.post("/item",formData,{
             headers:{
                 'Content-Type': 'multipart/form-data'
             }

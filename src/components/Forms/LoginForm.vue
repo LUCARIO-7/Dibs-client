@@ -9,7 +9,7 @@ const user=ref({
 })
 async function login(){
     try {
-        const response= await axios.post("http://localhost:8081/login",user.value);
+        const response= await axios.post("/login",user.value);
         console.log(response.data);
          router.push("/")
     } catch (error) {
