@@ -20,17 +20,16 @@ async function adduser() {
         errorMessage.value = "Username and password are required.";
         return;
     }
-    if (!profilePicture.value) {
-        errorMessage.value = "Profile picture is required.";
-        return;
-    }
+    
 
     errorMessage.value = '';
     const formData = new FormData();
     formData.append('user', new Blob([JSON.stringify(user.value)], {
         type: "application/json"
     }));
-    formData.append('profilePicture', profilePicture.value);
+    if (profilePicture.value) {
+        formData.append('profilePicture', profilePicture.value);
+    }
 
     try {
         const response = await axios.post("/register", formData, {
@@ -66,7 +65,7 @@ async function adduser() {
             <input v-model="user.password" type="password" class="input w-full" placeholder="password" required>
             
             <label class="label">Profile Picture</label>
-            <input @change="handleImageupload" type="file" class="file-input w-full" required>
+            <input @change="handleImageupload" type="file" class="file-input w-full">
             
             <button class="btn btn-primary mt-4 w-full" type="submit">Submit</button>
         </form>
