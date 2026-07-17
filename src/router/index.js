@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Homepage from '../components/Homepage.vue';
-import Login from '../components/Login.vue';
-import AddItem from '@/components/addItem.vue';
-import LostItems from '@/components/LostItems.vue';
-import Founditems from '@/components/Founditems.vue';
-import User from '@/components/user.vue';
-import NotFound from '@/components/NotFound.vue';
-import Logout from '@/components/Logout.vue';
-import Signup from '@/components/register/Signup.vue';
+import Homepage from '@/views/HomeView.vue';
+import Login from '@/views/LoginView.vue';
+import AddItem from '@/views/AddItemView.vue';
+import LostItems from '@/views/LostItemsView.vue';
+import Founditems from '@/views/FoundItemsView.vue';
+import User from '@/views/UserView.vue';
+import NotFound from '@/views/NotFoundView.vue';
+import Logout from '@/views/LogoutView.vue';
+import Signup from '@/views/SignupView.vue';
 
 
 

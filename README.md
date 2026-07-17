@@ -36,3 +36,27 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Project Structure & Guidelines
+
+To maintain a clean and scalable codebase, please adhere to the following conventions when creating new pages or components:
+
+### 1. Folder Locations
+
+- **Pages / Views (`src/views/`)**:
+  - Contains components that are loaded directly via routing in `src/router/index.js`.
+  - Filename naming convention: **PascalCase** suffixed with `View.vue` (e.g., `HomeView.vue`, `LoginView.vue`, `AddItemView.vue`).
+
+- **Reusable Components (`src/components/`)**:
+  - Contains modular UI elements, forms, and layout components (e.g. components that are imported and used inside other views or parent components).
+  - Organize into subdirectories by category/feature (e.g., `src/components/Navigation/`, `src/components/Forms/`, `src/components/Items/`).
+  - Filename naming convention: **PascalCase** (e.g., `NavBar.vue`, `SearchTab.vue`, `LoginForm.vue`).
+
+### 2. Imports Reference
+
+- Always use the `@` alias (which points to the `src` folder) for cleaner imports instead of deep relative paths:
+  ```javascript
+  import SearchTab from '@/components/Navigation/SearchTab.vue';
+  ```
+- Make sure components are imported using their exact case-sensitive PascalCase filenames.
+

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SearchTab from './searchTab.vue';
+import SearchTab from './SearchTab.vue';
 import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
@@ -43,7 +43,7 @@ watch(() => route.path, () => {
       </ul>
     </div>
     <div class="navbar-end" >
-  <SearchTab/>
+  
 <a v-if="!isLoggedIn" href="/login" class="ml-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition duration-200">
   Login
 </a>

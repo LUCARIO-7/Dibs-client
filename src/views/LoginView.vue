@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import LoginForm from './Forms/LoginForm.vue';
+import LoginForm from '@/components/Forms/LoginForm.vue';
 import axios from 'axios';
 import { ref } from 'vue';
 const isloggedin=ref(false)

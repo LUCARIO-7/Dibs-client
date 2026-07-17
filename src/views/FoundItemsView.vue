@@ -1,6 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import SearchTab from '@/components/Navigation/SearchTab.vue';
 
 const items=ref();
 const baseimage=ref();
@@ -38,6 +39,7 @@ try {
 fetchItems();
 </script>
 <template>
+  <SearchTab/>
    <div class="dropdown">
   <div tabindex="0" role="button" class="btn m-1">Location</div>
   <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">

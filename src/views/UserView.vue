@@ -1,8 +1,8 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import ClaimedItems from './Items/ClaimedItems.vue';
-import PostedItems from './Items/PostedItems..vue';
+import ClaimedItems from '@/components/Items/ClaimedItems.vue';
+import PostedItems from '@/components/Items/PostedItems.vue';
 const username=ref('');
 const user=ref({});
 async function getUsername(){

@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import searchTab from './Navigation/searchTab.vue';
+import SearchTab from '@/components/Navigation/SearchTab.vue';
 const items=ref();
 const baseimage=ref();
 async function fetchItems(){
@@ -12,6 +12,6 @@ async function fetchItems(){
 fetchItems();
 </script>
 <template>
-  <searchTab/>
+  <SearchTab/>
  c
 </template>
